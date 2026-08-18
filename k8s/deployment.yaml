@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: flask-demo
-          image: rupa1277/flask-demo:latest   # CI updates this tag automatically
+          image: rupa1277/flask-demo:2
           ports:
             - containerPort: 5000
 ---
