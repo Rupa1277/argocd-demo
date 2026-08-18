@@ -96,7 +96,7 @@ def home():
 
                 <div class="card">
                     <div class="label">Version</div>
-                    <div class="value">1.0</div>
+                    <div class="value">2.0</div>
                 </div>
 
                 <div class="card">
