@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: flask-demo
-          image: rupa1277/flask-demo:3
+          image: rupa1277/flask-demo:4
           ports:
             - containerPort: 5000
 ---
