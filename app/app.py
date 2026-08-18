@@ -54,7 +54,7 @@ def hello():
             <h1>🚀 DevOps CI/CD Pipeline Demo</h1>
 
             <div class="version">
-                Version 3 Successfully Deployed!
+                Version 5 Successfully Deployed!
             </div>
 
             <p class="success">
