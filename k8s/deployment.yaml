@@ -1,33 +1,56 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-demo
+  name: feature-tracker
   labels:
-    app: flask-demo
+    app: feature-tracker
+
 spec:
   replicas: 2
+
   selector:
     matchLabels:
-      app: flask-demo
+      app: feature-tracker
+
   template:
     metadata:
       labels:
-        app: flask-demo
+        app: feature-tracker
+
     spec:
       containers:
-        - name: flask-demo
-          image: rupa1277/flask-demo:5
+        - name: feature-tracker
+          image: rupa1277/feature-tracker:latest
+
           ports:
             - containerPort: 5000
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-demo-svc
+  name: feature-tracker-svc
+
 spec:
   selector:
-    app: flask-demo
+    app: feature-tracker
+
   ports:
     - port: 80
       targetPort: 5000
+
   type: ClusterIP
