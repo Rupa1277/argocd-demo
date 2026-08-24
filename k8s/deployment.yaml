@@ -19,9 +19,14 @@ spec:
 
     spec:
       containers:
+<<<<<<< HEAD
         - name: feature-tracker
           image: rupa1277/feature-tracker:latest
 
+=======
+        - name: flask-demo
+          image: rupa1277/flask-demo:6
+>>>>>>> origin/main
           ports:
             - containerPort: 5000
 
