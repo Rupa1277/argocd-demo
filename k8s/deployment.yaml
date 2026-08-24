@@ -21,7 +21,7 @@ spec:
       containers:
 <<<<<<< HEAD
         - name: feature-tracker
-          image: rupa1277/feature-tracker:latest
+          image: rupa1277/feature-tracker:7
 
 =======
         - name: flask-demo
