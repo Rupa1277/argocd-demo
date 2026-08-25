@@ -21,7 +21,7 @@ spec:
       containers:
       containers:
         - name: feature-tracker
-          image: rupa1277/feature-tracker:7
+          image: rupa1277/feature-tracker:8
           ports:
             - containerPort: 5000
 
